@@ -28,12 +28,12 @@ export default function AboutPage() {
 
   return (
     <main className="min-h-screen bg-white pt-16">
-      <Navbar isLoaded={false} /> {/* Set isLoaded to false to prevent animation */}
+      <Navbar isLoaded={isLoaded} />
       <AboutHero isLoaded={isLoaded} />
       <MeetOurTeam isLoaded={isLoaded} />
-      <OurValues isLoaded={isLoaded} />
-      <Testimonials isLoaded={isLoaded} />
-      <JoinUs isLoaded={isLoaded} />
+      <OurValues  />
+      <Testimonials />
+      <JoinUs />
       <Footer isLoaded={isLoaded} />
     </main>
   )

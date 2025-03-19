@@ -1,8 +1,13 @@
 "use client"
+import React from 'react'
 import { motion } from "framer-motion"
 import Image from "next/image"
 
-export default function MeetOurTeam({ isLoaded = false }) {
+interface MeetOurTeamProps {
+  isLoaded: boolean;
+}
+
+const MeetOurTeam: React.FC<MeetOurTeamProps> = ({ isLoaded }) => {
   const teamMembers = [
     {
       name: "Amira L",
@@ -93,4 +98,6 @@ export default function MeetOurTeam({ isLoaded = false }) {
     </section>
   )
 }
+
+export default MeetOurTeam
 

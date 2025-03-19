@@ -10,6 +10,9 @@ import Footer from "@/components/footer"
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false)
 
+  // Define the phrases to be used in the InfiniteSlider
+  const phrases = ["Phrase 1", "Phrase 2", "Phrase 3"] // Add your phrases here
+
   // Add smooth scrolling and set loaded state
   useEffect(() => {
     document.documentElement.style.scrollBehavior = "smooth"
@@ -30,7 +33,7 @@ export default function Home() {
       <Navbar isLoaded={isLoaded} /> {/* Pass isLoaded to enable animations */}
       <HeroSection isLoaded={isLoaded} />
       <EventSection isLoaded={isLoaded} />
-      <InfiniteSlider isLoaded={isLoaded} />
+      <InfiniteSlider isLoaded={isLoaded} phrases={phrases} />
       <Newsletter isLoaded={isLoaded} />
       <Footer isLoaded={isLoaded} />
     </main>
