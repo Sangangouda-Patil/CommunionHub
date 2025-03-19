@@ -11,7 +11,11 @@ export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false)
 
   // Define the phrases to be used in the InfiniteSlider
-  const phrases = ["Phrase 1", "Phrase 2", "Phrase 3"] // Add your phrases here
+  const phrases = [
+    "Connect Beyond Beliefs",
+    "Create with Purpose",
+    "Inspire as One"
+  ] // Replace the placeholder phrases with your actual content
 
   // Add smooth scrolling and set loaded state
   useEffect(() => {

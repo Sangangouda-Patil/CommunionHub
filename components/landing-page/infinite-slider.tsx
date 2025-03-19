@@ -41,14 +41,17 @@ export default function InfiniteSlider({
 
     // Set animation duration based on content width and speed
     const contentWidth = content.offsetWidth
-    const duration = contentWidth / speed
+    console.log('Content width:', contentWidth); // Debug log
+
+    // Ensure minimum duration
+    const duration = Math.max(contentWidth / speed, 10)
+    console.log('Animation duration:', duration); // Debug log
 
     // Apply animation to both original and cloned content
     const elements = sliderRef.current.querySelectorAll(".slider-content")
     elements.forEach((el, i) => {
       const element = el as HTMLDivElement
       element.style.animationDuration = `${duration}s`
-      element.style.animationDelay = i === 0 ? "0s" : "0s"
     })
   }, [speed])
 
